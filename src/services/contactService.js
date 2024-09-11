@@ -1,0 +1,59 @@
+import axios from "axios";
+
+const SERVER_URL = "http://localhost:9000";
+
+//@desc Get All Contacts
+//@route GET http://localhost:9000/contacts
+export const getAllContacts = () => {
+  const url = `${SERVER_URL}/contacts`;
+  return axios.get(url);
+};
+
+//@desc Get Contact whith Contact ID
+//@route GET http://localhost:9000/contacts/:ContactID
+export const getContact = (contactId) => {
+  const url = `${SERVER_URL}/contacts/${contactId}`;
+  return axios.get(url);
+};
+
+//@desc Get All get All Groups
+//@route GET http://localhost:9000/groups
+export const getAllGroups = () => {
+  const url = `${SERVER_URL}/groups`;
+  return axios.get(url);
+};
+
+//@desc Get All get Group Name Group ID
+//@route GET http://localhost:9000/groups/:GroupID
+export const getGroup = (groupId) => {
+  const url = `${SERVER_URL}/groups/${groupId}`;
+  return axios.get(url);
+};
+
+//@desc Get Create New Contact
+//@route POST http://localhost:9000/contacts
+export const createContact = (contact) => {
+  const url = `${SERVER_URL}/contacts`;
+  return axios.post(url, contact);
+};
+
+//@desc Get Update Contact
+//@route POST http://localhost:9000/contacts/:contactID
+export const addContact = (contact, contactId) => {
+  const url = `${SERVER_URL}/contacts/${contactId}`;
+  return axios.put(url, contact);
+};
+
+// @desc  Update Contact
+// @route PUT http://localhost:9000/contacts/:contactId
+export const updataContact = (contact, contactId) => {
+  const url = `${SERVER_URL}/contacts/${contactId}`;
+  return axios.put(url, contact);
+};
+
+//@desc Get Delete Contact
+//@route POST http://localhost:9000/contacts/:contactID
+export const deleteContact = (contactId) => {
+  const url = `${SERVER_URL}/contacts/${contactId}`;
+  return axios.delete(url);
+};
