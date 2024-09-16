@@ -32,8 +32,7 @@ const ViewContact = () => {
       }
     };
 
-    fetchData();
-    console.log(contact);
+    fetchData();  
   }, []);
 
   const { loading, contact, group } = state;

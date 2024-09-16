@@ -3,8 +3,7 @@ import { BACKGROUND, PURPLE } from "../helpers/colors";
 import SearchContact from "./contacts/SearchContact";
 import { useLocation } from "react-router-dom";
 
-const Navbar = ({ query, search }) => {
-
+const Navbar = () => {
   const location = useLocation();
   return (
     <nav
@@ -19,14 +18,11 @@ const Navbar = ({ query, search }) => {
               اپلیکیشن مدیریت <span style={{ color: PURPLE }}>مخاطبین</span>
             </div>
           </div>
-          {
-            location.pathname === "/contacts" ? (
-          <div className="col">
-            <SearchContact query={query} search={search} />
-          </div>
-
-            ) : null
-          }
+          {location.pathname === "/contacts" ? (
+            <div className="col">
+              <SearchContact />
+            </div>
+          ) : null}
         </div>
       </div>
     </nav>

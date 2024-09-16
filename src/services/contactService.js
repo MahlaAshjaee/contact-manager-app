@@ -37,7 +37,7 @@ export const createContact = (contact) => {
   return axios.post(url, contact);
 };
 
-//@desc Get Update Contact
+//@desc Get add Contact
 //@route POST http://localhost:9000/contacts/:contactID
 export const addContact = (contact, contactId) => {
   const url = `${SERVER_URL}/contacts/${contactId}`;
@@ -46,7 +46,7 @@ export const addContact = (contact, contactId) => {
 
 // @desc  Update Contact
 // @route PUT http://localhost:9000/contacts/:contactId
-export const updataContact = (contact, contactId) => {
+export const updateContact = (contact, contactId) => {
   const url = `${SERVER_URL}/contacts/${contactId}`;
   return axios.put(url, contact);
 };
